@@ -7,7 +7,7 @@ function pageLoad(){
 	var upHands = document.getElementById("hands");
 	//pizCount.innerHTML = "abba";
 	piz.onclick = pizClick;
-	upHands.onclick = hands;
+	upHands.onclick = upgradeHands;
 }
 
 function pizClick(){
@@ -17,6 +17,7 @@ function pizClick(){
 
 function hands(){
 	autoClicker(hands ,1);
+	incCost(cost);
 }
 
 function autoClicker(func, val){
@@ -27,4 +28,14 @@ function autoClicker(func, val){
 
 function updatePizza(){
 	document.getElementById("pizzaCount").innerHTML = pizzaCount;
+}
+
+function upgradeHands(){
+	var cost = document.getElementById("costHands").innerHTML;
+	if(pizzaCount >= cost){
+		pizzaCount = pizzaCount - cost;
+		updatePizza();
+		document.getElementById("costHands").innerHTML = cost * 2;
+		hands();
+	}
 }
