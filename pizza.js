@@ -4,18 +4,27 @@ var pizzaCount = 0;
 
 function pageLoad(){
 	var piz = document.getElementById("pizza");
+	var upHands = document.getElementById("hands");
 	//pizCount.innerHTML = "abba";
 	piz.onclick = pizClick;
-	hands();
+	upHands.onclick = hands;
 }
 
 function pizClick(){
 	pizzaCount++;
-	document.getElementById("pizzaCount").innerHTML = pizzaCount;
+	updatePizza();
 }
 
 function hands(){
-	setTimeout(hands, 1000);
+	autoClicker(hands ,1000);
+}
+
+function autoClicker(func, interval){
+	setTimeout(func, interval);
 	pizzaCount++;
+	updatePizza();
+}
+
+function updatePizza(){
 	document.getElementById("pizzaCount").innerHTML = pizzaCount;
 }
