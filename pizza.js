@@ -16,12 +16,12 @@ function pizClick(){
 }
 
 function hands(){
-	autoClicker(hands ,1000);
+	autoClicker(hands ,1);
 }
 
-function autoClicker(func, interval){
-	setTimeout(func, interval);
-	pizzaCount++;
+function autoClicker(func, val){
+	setTimeout(func, 1000);
+	pizzaCount+= val;
 	updatePizza();
 }
 
