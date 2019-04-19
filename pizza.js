@@ -15,16 +15,48 @@ function pizClick(){
 	updatePizza();
 }
 
+//  Power-up Functions
 function hands(){
 	autoClicker(hands ,1);
 }
+function italians() {
+    autoClicker(italians, 5);
+}
+function pizzaShop() {
+    autoClicker(pizzaShop, 20);
+}
+function pizzaCellar() {
+    autoClicker(pizzaCellar, 50);
+}
+function pizzaCity() {
+    autoClicker(pizzaCity, 200);
+}
+function pizzaCountry() {
+    autoClicker(pizzaCountry, 650);
+}
+function pizzaContinent() {
+    autoClicker(pizzaContinent, 2250);
+}
+function spacePizza() {
+    autoClicker(spacePizza, 5500);
+}
+function nuclearPizza() {
+    autoClicker(nuclearPizza, 12000);
+}
+function moap() {
+    autoClicker(moap, 25000);
+}
+function pizzaEntropy() {
+    alert("All atoms in the universe, now belong to pizza.");
+}
 
+//  Auto-pizza-incrementation function
 function autoClicker(func, val){
 	setTimeout(func, 1000);
 	pizzaCount+= val;
 	updatePizza();
 }
-
+//  Update the pizza count, after all is said and done
 function updatePizza(){
 	document.getElementById("pizzaCount").innerHTML = pizzaCount;
 }
