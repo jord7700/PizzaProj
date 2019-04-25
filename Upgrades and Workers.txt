@@ -18,16 +18,16 @@ space -> Space Pizza -> BigInt
 nuclear -> Nuclear Pizza Fusion -> BigInt
 moap -> Mother of all Pizzas -> BigInt
 
-TableName: workers
+TableName: upgrades
 user -> Username -> VarChar(255)
-hands -> Pizza Making Hands
-mafia -> Pizza Mafia
-mascot -> Rat Mascot
-vineyard -> Pizza Vineyard
-pizzatropolis -> PizzaTropolis
-government -> Pizza Government
-upa -> United Pizza of America
-moons -> Pizza Moons
-ppp -> Pizza3
-god -> Pizza God
-entropy -> Ends the Game
+hands -> Pizza Making Hands -> Bit
+mafia -> Pizza Mafia -> Bit
+mascot -> Rat Mascot -> Bit
+vineyard -> Pizza Vineyard -> Bit
+pizzatropolis -> PizzaTropolis -> Bit
+government -> Pizza Government -> Bit
+upa -> United Pizza of America -> Bit
+moons -> Pizza Moons -> Bit
+ppp -> Pizza3 -> Bit
+god -> Pizza God -> Bit
+entropy -> Ends the Game -> Bit
