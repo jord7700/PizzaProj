@@ -1,0 +1,33 @@
+SQL Name -> Meaning
+
+TableName: stats
+user -> Username -> VarChar(255)
+pizza -> Current Amount of Pizzas -> BigInt
+totalpizza -> All Time Earned Pizzas -> BigInt
+
+TableName: workers
+user -> Username -> VarChar(255)
+hands -> Hands -> BigInt
+italians -> Italians -> BigInt
+shops -> Pizza Shops -> BigInt
+cellars -> Pizza Cellars -> BigInt
+cities -> Pizza Cities -> BigInt
+countries -> Pizza Countries -> BigInt
+continents -> Pizza Continents -> BigInt
+space -> Space Pizza -> BigInt
+nuclear -> Nuclear Pizza Fusion -> BigInt
+moap -> Mother of all Pizzas -> BigInt
+
+TableName: upgrades
+user -> Username -> VarChar(255)
+hands -> Pizza Making Hands -> Bit
+mafia -> Pizza Mafia -> Bit
+mascot -> Rat Mascot -> Bit
+vineyard -> Pizza Vineyard -> Bit
+pizzatropolis -> PizzaTropolis -> Bit
+government -> Pizza Government -> Bit
+upa -> United Pizza of America -> Bit
+moons -> Pizza Moons -> Bit
+ppp -> Pizza3 -> Bit
+god -> Pizza God -> Bit
+entropy -> Ends the Game -> Bit
