@@ -3,7 +3,7 @@
 	$username = "";
 	$table = "";
 	$col = "";
-	$gsa = "";
+	$type = "";
 	$output = "";
 
 	if(isset($_GET['username'])){
