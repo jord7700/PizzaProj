@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="pizzaclicker.css" type="text/css" rel="stylesheet" />
+        <script src="pizzaClicker.js" type="text/javascript" ></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Shop</span>
+            
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Pizza Gatherers</a>
+                <a href="#"><button id="chefHand" class="farm_button button1"> +1<br><span id="fCost-chefHand"> 5 </span></button>
+                    <img class="menu-img" src="images/xl_chef_hand.png" alt="chef hand">Chef Hand<span class="upgrade">
+                    <button id="upgrade_chefHand" class="upgrade_button button2"> Upgrade<br><span id="uCost-chefHand"> 10 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="italian" class="farm_button button1"> +1<br><span id="fCost-italian"> 10 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza Cellar"> Italian<span class="upgrade">
+                    <button id="upgrade_italian" class="upgrade_button button2"> Upgrade<br><span id="uCost-italian"> 15 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizzaShop" class="farm_button button1"> +1<br><span id="fCost-pizzaShop"> 15 </span></button>
+                    <img class="menu-img" src="images/xl_pizza_shop.png" alt="Pizza Shop"> Pizza Shop<span class="upgrade">
+                    <button id="upgrade_pizzaShop" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaShop"> 20 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizzaCellar" class="farm_button button1"> +1<br><span id="fCost-pizzaCellar"> 20 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza Cellar"> Pizza Cellar<span class="upgrade">
+                    <button id="upgrade_pizzaCellar" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaCellar"> 25 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizzaCity" class="farm_button button1"> +1<br><span id="fCost-pizzaCity"> 25 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza City"> Pizza City<span class="upgrade">
+                    <button id="upgrade_pizzaCity" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaCity"> 30 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizzaCountry" class="farm_button button1"> +1<br><span id="fCost-pizzaCountry"> 30 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza Country"> Pizza Country<span class="upgrade">
+                    <button id="upgrade_pizzaCountry" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaCountry"> 35 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizzaContinent" class="farm_button button1"> +1<br><span id="fCost-pizzaContinent"> 35 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza Continent"> Pizza Continent<span class="upgrade">
+                    <button id="upgrade_pizzaContinent" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaContinent"> 40 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="spacePizza" class="farm_button button1"> +1<br><span id="fCost-spacePizza"> 40 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Space Pizza"> Space Pizza<span class="upgrade">
+                    <button id="upgrade_spacePizza" class="upgrade_button button2"> Upgrade<br><span id="uCost-spacePizza"> 45 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="nuclearPizza" class="farm_button button1"> +1<br><span id="fCost-nuclearPizza"> 45 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Nuclear Pizza Fusion"> Nuclear Pizza Fusion<span class="upgrade">
+                    <button id="upgrade_nuclearPizza" class="upgrade_button button2"> Upgrade<br><span id="uCost-nuclearPizza"> 50 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="moap" class="farm_button button1"> +1<br><span id="fCost-moap"> 50 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="MOAP"> MOAP<span class="upgrade">
+                    <button id="upgrade_moap" class="upgrade_button button2"> Upgrade<br><span id="uCost-moap"> 55 </span></button></span></a>
+                    <br><hr>
+                <a href="#"><button id="pizza_entropy" class="farm_button button1"> +1<br><span id="fCost-pizzaEntropy"> 55 </span></button>
+                    <img class="menu-img" src="images/Pizza_cellar.png" alt="Pizza Entropy"> Pizza Entropy<span class="upgrade">
+                    <button id="upgrade_pizzaEntropy" class="upgrade_button button2"> Upgrade<br><span id="uCost-pizzaEntropy"> 60 </span></button></span></a>
+                    <br><hr>
+            </div>
+            
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "35.33%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
+        </div>
+        <div id="horizontal_bar">
+            
+        </div>
+        <div class="flex-container">
+            <div>
+                <img id="pizza_shop" src="images/xl_pizza_shop.png" alt="Pizza Shop">
+                <img id="inspiration_chef" src="images/xl_inspiration_chef.png" alt="Inspiration Chef">
+                <!--<p id="speech_bubble_chat"> Talking </p>-->
+                <img id="text_bubble" src="images/xl_text_bubble.png" alt="Text Bubble">
+            </div>
+            <div id="border-panel">
+                
+            </div>
+            <div>
+                <div class="v_div" id="clicker_pizza_section">
+                    <input type="image" id="clicker-pizza" src="images/xl_clicker_pizza_2.png" name="click_pizza"/>
+                </div>
+                <div id="score_board">
+                    <p id="score_title">Score:</p>
+                    <p id="player_score"> 0 </p>
+                    <img id="pizza_mountain" src="images/pizza_pile.png" alt="Mountain of Pizza">
+                </div>
+            </div>
+            <div id="border-panel">
+                
+            </div>
+            <div>
+                <div class="farmers_menu">
+                    <a href="#" class="active">Pizza Farmers</a>
+                    <a href="#">Hands</a>
+                    <a href="#">Italians</a>
+                    <a href="#">Pizza Shops</a>
+                    <a href="#">Pizza Cellar</a>
+                    <a href="#">Pizza City</a>
+                    <a href="#">Pizza Country</a>
+                    <a href="#">Pizza Continent</a>
+                    <a href="#">Space Pizza</a>
+                    <a href="#">Nuclear Pizza Reactors</a>
+                    <a href="#">MOAP</a>
+                </div>
+                <div class="upgrade_menu">
+                    <a href="#" class="active">Upgrades</a>
+                    <a href="#">Hands</a>
+                    <a href="#">Italians</a>
+                    <a href="#">Pizza Shops</a>
+                    <a href="#">Pizza Cellar</a>
+                    <a href="#">Pizza City</a>
+                    <a href="#">Pizza Country</a>
+                    <a href="#">Pizza Continent</a>
+                    <a href="#">Space Pizza</a>
+                    <a href="#">Nuclear Pizza Reactors</a>
+                    <a href="#">MOAP</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

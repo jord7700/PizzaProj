@@ -1,0 +1,369 @@
+/*                  *
+*                   *
+*      Global       *
+*                   *
+*                  */ 
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+div {
+    overflow: hidden;
+}
+
+a {
+    display: inline-block;
+}
+
+input {
+    outline: none;
+}
+
+/*                  *
+*                   *
+*    div format     *
+*                   *
+*                  */ 
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: OliveDrab;
+}
+
+.flex-container > div {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0px;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+#top-bar {
+    height: 5%;
+    text-align: left;
+    width: 99.3%;
+    background-color: OliveDrab;
+    
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#horizontal_bar{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    height: 5%;
+    width: 100%;
+    background-image: url("images/xl_pizza_column_h.png");
+}
+
+#score_board {
+    background-color: red;
+    border-top: 10px solid black;
+    padding-top: 30px;
+    height: 60%;
+    font-size: 5em;
+    text-align: center;
+    overflow: hidden;
+}
+
+#clicker_pizza_section {
+    border-top: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 40%;
+    padding-top: 30px;
+    font-size: 10em;
+}
+
+#border-panel {
+    background-image: url("images/italy_border.png");
+    background-repeat: repeat;
+    background-size: contain;
+    width: 6%;
+}
+
+/*                  *
+*                   *
+*      Buttons      *
+*                   *
+*                  */ 
+
+.farm_button {
+    display: inline;
+    float: left;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upgrade_button {
+    display: inline;
+    float: left;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: OliveDrab;
+    color: white;
+}
+
+.button2:hover {
+    background-color: DeepSkyBlue;
+    color: white;
+}
+
+.upgrade {
+    float: right;
+}
+
+/*                  *
+*                   *
+*    Text format    *
+*                   *
+*                  */
+
+#score_title {
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+#player_score {
+    font-size: 80px;
+    margin: 0;
+    padding: 5px 0px 0px 0px;
+}
+
+#speech_bubble_chat {
+    font-size: 19px;
+    position: relative;
+    bottom: 70%;
+    left: 80%;
+    z-index: +4;
+}
+
+/*                  *
+*                   *
+*   Image format    *
+*                   *
+*                  */ 
+
+#clicker-pizza{
+    width: 320px;
+    height: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#pizza_shop{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    right: 7%;
+    position: relative;
+    text-align: left;
+    z-index: +1;
+}
+
+#inspiration_chef{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 20%;
+    z-index: +2;
+}
+
+#text_bubble{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    bottom: 65%;
+    left: 51%;
+    z-index: +3;
+}
+
+#pizza_mountain {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    right: 25px;
+    bottom: 200px;
+    z-index: 2;
+}
+
+/*                  *
+*                   *
+*   Image Effects   *
+*                   *
+*                  */
+
+.menu-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    padding-right: 10px;
+}
+
+/* Image Shake *
+*/
+
+input:hover {
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
+}
+
+img:hover {
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*                  *
+*                   *
+*       Menus       *
+*                   *
+*                  */                  
+
+/* Shop
+*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  filter: alpha(opacity=5);
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Farmers Menu
+*/
+
+.farmers_menu {
+    background-color: white;
+    width: 280px;
+    height: 880px;
+    float: left;
+    overflow-y: auto;
+}
+
+.farmers_menu a {
+    border: 1px solid transparent;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 15pt;
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.farmers_menu a:hover {
+    background-color: gray;
+}
+
+.farmers_menu a.active {
+    border: 1px solid black;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 20pt;
+    text-align: center;
+    background-color: OliveDrab;
+    color: white;
+}
+
+.upgrade_menu {
+    background-color: white;
+    width: 280px;
+    height: 880px;
+    float: left;
+    overflow-y: auto;
+}
+
+.upgrade_menu a {
+    border: 1px solid transparent;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 15pt;
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.upgrade_menu a:hover {
+    background-color: gray;
+}
+
+.upgrade_menu a.active {
+    border: 1px solid black;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 20pt;
+    text-align: center;
+    background-color: DeepSkyBlue;
+    color: white;
+}

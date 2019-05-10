@@ -1,8 +1,8 @@
 <?php
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $dbname = "dealer";
     $username = "root";
-    $password = "";
+    $password = "gmatroot123";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
