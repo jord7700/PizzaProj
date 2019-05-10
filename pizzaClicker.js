@@ -76,6 +76,7 @@ function upgradeHands () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_hands").innerHTML = " Owned";
         document.getElementById("uCost-chefHand").innerHTML = "BOUGHT!";
     }
 }
@@ -86,6 +87,7 @@ function upgradeItalian () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_italian").innerHTML = " Owned";
         document.getElementById("uCost-italian").innerHTML = "BOUGHT!";
     }
 }
@@ -95,6 +97,7 @@ function upgradeShop () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_shop").innerHTML = " Owned";
         document.getElementById("uCost-pizzaShop").innerHTML = "BOUGHT!";
     }
 }
@@ -104,69 +107,98 @@ function upgradeCellar () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_cellar").innerHTML = " Owned";
         document.getElementById("uCost-pizzaCellar").innerHTML = "BOUGHT!";
     }
 }
 function upgradeCity () {
     var cost = document.getElementById("uCost-pizzaCity").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_city").innerHTML = " Owned";
         document.getElementById("uCost-pizzaCity").innerHTML = "BOUGHT!";
     }
 }
 function upgradeCountry () {
     var cost = document.getElementById("uCost-pizzaCountry").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_country").innerHTML = " Owned";
         document.getElementById("uCost-pizzaCountry").innerHTML = "BOUGHT!";
     }
 }
 function upgradeContinent () {
     var cost = document.getElementById("uCost-pizzaContinent").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_continent").innerHTML = " Owned";
         document.getElementById("uCost-pizzaContinent").innerHTML = "BOUGHT!";
     }
 }
 function upgradeSpace () {
     var cost = document.getElementById("uCost-spacePizza").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_space").innerHTML = " Owned";
         document.getElementById("uCost-spacePizza").innerHTML = "BOUGHT!";
     }
 }
 function upgradeNuclear () {
     var cost = document.getElementById("uCost-nuclearPizza").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_reactor").innerHTML = " Owned";
         document.getElementById("uCost-nuclearPizza").innerHTML = "BOUGHT!";
     }
 }
 function upgradeMoap () {
     var cost = document.getElementById("uCost-moap").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_moap").innerHTML = " Owned";
         document.getElementById("uCost-moap").innerHTML = "BOUGHT!";
     }
 }
 function upgradeEntropy () {
     var cost = document.getElementById("uCost-pizzaEntropy").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        document.getElementById("count_u_italian").innerHTML = " Owned";
         document.getElementById("uCost-pizzaEntropy").innerHTML = "BOUGHT!";
     }
 }
@@ -176,31 +208,31 @@ function hands(){
     autoClicker(hands ,1);
 }
 function italians() {
-    autoClicker(italians, 5);
+    autoClicker(italians, 2);
 }
 function pizzaShop() {
-    autoClicker(pizzaShop, 20);
+    autoClicker(pizzaShop, 5);
 }
 function pizzaCellar() {
-    autoClicker(pizzaCellar, 50);
+    autoClicker(pizzaCellar, 10);
 }
 function pizzaCity() {
-    autoClicker(pizzaCity, 200);
+    autoClicker(pizzaCity, 500);
 }
 function pizzaCountry() {
-    autoClicker(pizzaCountry, 650);
+    autoClicker(pizzaCountry, 100);
 }
 function pizzaContinent() {
-    autoClicker(pizzaContinent, 2250);
+    autoClicker(pizzaContinent, 4250);
 }
 function spacePizza() {
-    autoClicker(spacePizza, 5500);
+    autoClicker(spacePizza, 92000);
 }
 function nuclearPizza() {
-    autoClicker(nuclearPizza, 12000);
+    autoClicker(nuclearPizza, 120000);
 }
 function moap() {
-    autoClicker(moap, 25000);
+    autoClicker(moap, 250000);
 }
 function pizzaEntropy() {
     alert("All atoms in the universe, now belong to pizza.");
@@ -222,6 +254,9 @@ function farmHands(){
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
+        var count = document.getElementById("count_f_hands").innerText;
+        count++;
+        document.getElementById("count_f_hands").innerText = " " + count;
         document.getElementById("fCost-chefHand").innerHTML = cost * 2;
         hands();
     }
@@ -233,6 +268,9 @@ function farmItalian () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        var count = document.getElementById("count_f_italian").innerText;
+        count++;
+        document.getElementById("count_f_italian").innerText = " " + count;
         document.getElementById("fCost-italian").innerHTML = cost * 2;
         italians();
     }
@@ -243,6 +281,9 @@ function farmShop () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        var count = document.getElementById("count_f_shop").innerText;
+        count++;
+        document.getElementById("count_f_shop").innerText = " " + count;
         document.getElementById("fCost-pizzaShop").innerHTML = cost * 2;
         pizzaShop();
     }
@@ -253,77 +294,140 @@ function farmCellar () {
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
+        var count = document.getElementById("count_f_cellar").innerText;
+        count++;
+        document.getElementById("count_f_cellar").innerText = " " + count;
         document.getElementById("fCost-pizzaCellar").innerHTML = cost * 2;
         pizzaCellar();
     }
 }
 function farmCity () {
     var cost = document.getElementById("fCost-pizzaCity").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-pizzaCity").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_city").innerText;
+        count++;
+        document.getElementById("count_f_city").innerText = " " + count;
+        cost = (cost / 1000) *2;
+        cost = cost.toString();
+        cost = cost.concat('k');
+        document.getElementById("fCost-pizzaCity").innerHTML = cost;
         pizzaCity();
     }
 }
 function farmCountry () {
     var cost = document.getElementById("fCost-pizzaCountry").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-pizzaCountry").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_country").innerText;
+        count++;
+        document.getElementById("count_f_country").innerText = " " + count;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-pizzaCountry").innerHTML = cost;
         pizzaCountry();
     }
 }
 function farmContinent () {
     var cost = document.getElementById("fCost-pizzaContinent").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-pizzaContinent").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_continent").innerText;
+        count++;
+        document.getElementById("count_f_continent").innerText = " " + count;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-pizzaContinent").innerHTML = cost;
         pizzaContinent();
     }
 }
 function farmSpace () {
     var cost = document.getElementById("fCost-spacePizza").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-spacePizza").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_space").innerText;
+        count++;
+        document.getElementById("count_f_space").innerText = " " + count;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-spacePizza").innerHTML = cost;
         spacePizza();
     }
 }
 function farmNuclear () {
     var cost = document.getElementById("fCost-nuclearPizza").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-nuclearPizza").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_reactor").innerText;
+        count++;
+        document.getElementById("count_f_reactor").innerText = " " + count;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-nuclearPizza").innerHTML = cost;
         nuclearPizza();
     }
 }
 function farmMoap () {
     var cost = document.getElementById("fCost-moap").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-moap").innerHTML = cost * 2;
+        var count = document.getElementById("count_f_entropy").innerText;
+        count++;
+        document.getElementById("count_f_entropy").innerText = " " + count;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-moap").innerHTML = cost;
         moap();
     }
 }
 function farmEntropy () {
     var cost = document.getElementById("fCost-pizzaEntropy").innerHTML;
+    cost = cost.substr(0, cost.length-1);
+    cost = parseInt(cost);
+    cost = cost * 1000000;
     if(pizzaCount >= cost){
         pizzaCount = pizzaCount - cost;
         updatePizza();
         pizzaClick = pizzaClick * 2;
-        document.getElementById("fCost-pizzaEntropy").innerHTML = cost * 2;
+        cost = (cost / 1000000) *2;
+        cost = cost.toString();
+        cost = cost.concat('m');
+        document.getElementById("fCost-pizzaEntropy").innerHTML = cost;
         pizzaEntropy();
     }
 }

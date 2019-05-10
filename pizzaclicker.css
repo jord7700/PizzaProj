@@ -2,7 +2,7 @@
 *                   *
 *      Global       *
 *                   *
-*                  */ 
+*                  */
 
 html, body {
     margin: 0px;
@@ -203,12 +203,18 @@ input {
 
 #pizza_mountain {
     width: 600px;
-    height: 600px;
+    height: 450px;
     margin: auto;
     position: relative;
-    right: 25px;
     bottom: 200px;
     z-index: 2;
+}
+
+.menu-img {
+    float: left;
+    width: 75x;
+    height: 75px;
+    padding-right: 10px;
 }
 
 /*                  *
@@ -216,13 +222,6 @@ input {
 *   Image Effects   *
 *                   *
 *                  */
-
-.menu-img {
-    float: left;
-    width: 60px;
-    height: 60px;
-    padding-right: 10px;
-}
 
 /* Image Shake *
 */
@@ -306,15 +305,15 @@ img:hover {
 
 .farmers_menu {
     background-color: white;
-    width: 280px;
-    height: 880px;
+    width: 350px;
+    height: 1000px;
     float: left;
     overflow-y: auto;
 }
 
 .farmers_menu a {
+    border: 1px solid gray;
     border: 1px solid transparent;
-    border-radius: 20px 0px 0px 20px;
     font-size: 15pt;
     background-color: black;
     color: white;
@@ -324,12 +323,13 @@ img:hover {
 }
 
 .farmers_menu a:hover {
-    background-color: gray;
+    background-color: white;
+    color: black;
 }
 
 .farmers_menu a.active {
     border: 1px solid black;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 15px 15px 0px 0px;
     font-size: 20pt;
     text-align: center;
     background-color: OliveDrab;
@@ -338,16 +338,17 @@ img:hover {
 
 .upgrade_menu {
     background-color: white;
-    width: 280px;
-    height: 880px;
+    width: 250px;
+    height: 1000px;
     float: left;
     overflow-y: auto;
 }
 
 .upgrade_menu a {
+    border: 1px solid gray;
     border: 1px solid transparent;
-    border-radius: 20px 0px 0px 20px;
-    font-size: 15pt;
+    font-size: 10pt;
+    text-align: center;
     background-color: black;
     color: white;
     display: block;
@@ -356,14 +357,35 @@ img:hover {
 }
 
 .upgrade_menu a:hover {
-    background-color: gray;
+    background-color: white;
+    color: black;
 }
 
 .upgrade_menu a.active {
     border: 1px solid black;
-    border-radius: 0px 0px 20px 20px;
-    font-size: 20pt;
+    border-radius: 15px 15px 0px 0px;
+    font-size: 13pt;
     text-align: center;
     background-color: DeepSkyBlue;
     color: white;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
 }
