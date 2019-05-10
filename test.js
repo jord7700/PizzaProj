@@ -2,6 +2,7 @@
 //      alert("Data: " + data + "\nStatus: " + status);
 //});
 
+
 $(document).ready(function(){
 	$("input#get").click(function(){
 		var name = $("input#name").val();
